@@ -20,6 +20,8 @@ import static org.assertj.core.api.Assertions.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureJdbc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -36,6 +38,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 @MybatisTest
 public class MyBatisTests {
 
+	private static final Logger logger = LoggerFactory.getLogger(MyBatisTests.class);
+
 	@Autowired LegoSetRepository repository;
 
 	@Test
@@ -51,6 +55,8 @@ public class MyBatisTests {
 
 		assertThat(smallCar.getId()).isNotNull();
 		assertThat(repository.findById(smallCar.getId()).get().getModels()).hasSize(2);
+
+		logger.info("----------------------------------------------------------");
 
 		Output.list(repository.findAll(), "Original LegoSet");
 

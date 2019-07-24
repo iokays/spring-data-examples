@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyBatisTests",
+            "request": "launch",
+            "mainClass": "example.springdata.jdbc.mybatis.MyBatisTests",
+            "projectName": "spring-data-jdbc-mybatis"
+        }
+    ]
+}
