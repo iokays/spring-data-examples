@@ -7,3 +7,4 @@ target/
 #IntelliJ Stuff
 .idea
 *.iml
+/.gradle/

@@ -148,10 +148,21 @@
 	</dependencies>
 
 	<repositories>
+	
+		<repository>
+			<id>maven-ali</id>
+			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+		</repository>
+		
+		
 		<repository>
 			<id>spring-libs-snapshot</id>
 			<url>https://repo.spring.io/libs-snapshot</url>
 		</repository>
+		
+		
+		
+		
 	</repositories>
 
 	<pluginRepositories>
